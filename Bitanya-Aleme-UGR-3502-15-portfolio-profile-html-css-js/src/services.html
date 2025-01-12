@@ -3,14 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Works</title>
+    <title>My Services</title>
+    <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/f0ef797f47.js" crossorigin="anonymous"></script>
 
 </head>
 <body>
     <div id="services">
         <div class="container">
-            <h1 class="sub-title"> My Works</h1>
+            <nav>
+                <ul id="sidemenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutme.html">About Me</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <i class="fa-solid fa-x" onclick="closemenu()"> </i>
+                </ul>
+                <i class="fa-solid fa-bars"onclick="openmenu()"> </i>
+            </nav>
+            <h1 class="sub-title"> My Services</h1>
             <div class="services-list">
                 <div>
                     <i class="fa-solid fa-code"></i>
@@ -19,11 +31,13 @@
                     <a href="#">Learn more </a>
                 </div>
                 <div>
+                    <i class="fa-solid fa-database"></i>
                     <h2>Database Management </h2>
                     <p>Assisting with database setup and management, including SQL queries and basic database design. </p>
                     <a href="#">Learn more </a>
                 </div>
                 <div>
+                    <i class="fa-solid fa-gear"></i>
                     <h2>Technical Writing</h2>
                     <p>Writing documentation, tutorials, or blog posts about programming concepts, technologies, or your projects.</p>
                     <a href="#">Learn more </a>
@@ -32,6 +46,15 @@
             </div>
         </div>
     </div>
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script> 
     
 </body>
 </html>
